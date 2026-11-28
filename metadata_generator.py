@@ -387,8 +387,8 @@ def spin_motivational_metadata(
                 f"Powerful motivational speech featuring {clean_speaker} on mindset, relentless discipline, and overcoming adversity.\n\n"
                 f"\"If you want to change your life, you have to be willing to do the things everyone else avoids.\"\n\n"
                 f"Speaker: {clean_speaker}\n"
-                f"Channel: Hábitos de Acero\n\n"
-                f"Subscribe to Hábitos de Acero for daily motivation, life lessons, and personal growth."
+                f"Channel: Amor Propio y Paz\n\n"
+                f"Subscribe to Amor Propio y Paz for daily insights and personal growth."
             )
             base_tags = [
                 clean_speaker.lower(),
@@ -411,7 +411,7 @@ def spin_motivational_metadata(
 
     is_generic_speaker = clean_speaker.lower() in (
         "motivational speaker", "motivational leader", "inspirational leader",
-        "habitos de acero", "hábitos de acero", "sabiduría diaria", "sabiduria diaria", "unknown", "orador motivacional"
+        "amor propio y paz", "unknown", "unknown", "orador motivacional"
     )
 
     if mock or not api_key or api_key.startswith("gsk_placeholder") or "your_" in api_key:
@@ -433,7 +433,7 @@ def spin_motivational_metadata(
         )
 
         prompt = (
-            "You are an elite YouTube SEO strategist specializing in high-performing educational & motivational self-improvement channels (like Hábitos de Acero, Sabiduría Diaria, Motiversity).\n"
+            "You are an elite YouTube SEO strategist specializing in high-performing neuroscience, mindfulness, emotional serenity, and brain health channels (like Amor Propio y Paz, Nazareth Castellanos).\n"
             "IMPORTANT: Detect the source language. If the source title or transcript is in Spanish, ALL output (title, description, tags) MUST BE IN SPANISH (Español). If English, output in English.\n"
             "Given the original video title, description, and transcript snippet below, generate:\n\n"
             "1. TITLE (50-78 characters max):\n"
@@ -442,14 +442,14 @@ def spin_motivational_metadata(
             "   - Clean formatting: Capitalize First Letters, no all-caps sentences, no emojis.\n"
             "   - High CTR, direct, intriguing, urgent.\n\n"
             "2. DESCRIPTION (150-250 words in the same language):\n"
-            f"   - Line 1 MUST be 3-4 top niche hashtags: #{clean_speaker.lower().replace(' ', '')} #habitosdeacero #desarrollopersonal #disciplina\n"
+            f"   - Line 1 MUST be 3-4 top niche hashtags: #{clean_speaker.lower().replace(' ', '')} #amorpropioypaz #desarrollopersonal #reflexiones\n"
             "   - Next 2-3 sentences: An irresistible hook explaining why the viewer must watch, summarizing the core insight.\n"
             "   - Highlight a powerful quote extracted from the transcript in quotes.\n"
             f"   - Editorial credit: 'Voz / Orador: {clean_speaker}'.\n"
             "   - Add 3-4 bullet lines answering common search queries (e.g. ¿Cómo fortalecer la mente?, Técnicas para transformar tus hábitos).\n"
-            "   - End with: 'Suscríbete a Hábitos de Acero para tu dosis de disciplina, liderazgo y crecimiento personal.'\n\n"
+            "   - End with: 'Suscríbete a Amor Propio y Paz para descubrir cómo la neurociencia y el cuidado mental transforman tu vida hacia la serenidad."
             "3. TAGS (15-20 tags in the same language):\n"
-            f"   - Mix of specific tags (habitos de acero, dr mario, mario alonso puig, desarrollo personal, disciplina, {clean_speaker.lower()}) and top search queries.\n\n"
+            f"   - Mix of specific tags (nazareth castellanos, amor propio y paz, neurociencia, paz mental, meditacion, {clean_speaker.lower()}) and top search queries.\n\n"
             "4. CATEGORY: 'Education'.\n\n"
             f"ORIGINAL TITLE: {original_title}\n"
             f"ORIGINAL DESCRIPTION SNIPPET: {original_description[:400]}\n"
